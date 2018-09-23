@@ -17,6 +17,6 @@ class School
   end
 
   def sort
-    @roster.transform_values {|value| value.sort}
+    @roster.map {|key, value| [key, value.sort]}.to_h
   end
 end
